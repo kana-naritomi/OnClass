@@ -1,0 +1,71 @@
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+
+
+header {
+  text-align: right;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
+}
+
+header img {
+  width: 250px;
+  height: 31px;
+  margin: 24px 25px;
+}
+header h1 {
+  position: absolute;
+}
+header nav {
+  position: absolute;
+  top: 22px;
+  right: 16px;
+}
+header ul {
+  list-style: none;
+  display: inline-block;
+  top: 22px;
+  text-align: center;
+}
+header ul li {
+  display: inline-block;
+  font-size: 17px;
+  vertical-align: middle;
+  line-height: 35px;
+}
+header ul li a {
+  display: block;
+  color: #9c9b98;
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+/* header end */
+
+.keyvisual {
+  padding-top: 80px;
+  text-align: center;
+}
+
+.keyvisual img {
+  width: 100%;
+  max-width: 1500px;
+  
+}
+
+
+main h2 {
+  width: 1000px;
+  height: 40px;
+  background: #B99566;
+}
+
+
+.gourmet img {
+  width: 495px;
+  height: 495px;
+}
