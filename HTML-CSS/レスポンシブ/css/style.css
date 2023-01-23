@@ -57,6 +57,8 @@ header ul li a {
   
 }
 
+/* --------------------------------------- keyvisual end */
+
 main {
   width: 100%;
   max-width: 1000px;
@@ -68,14 +70,14 @@ main,footer {
 }
 
 main h2 {
-  height: 40px;
+  height: 38px;
   margin-top: 30px;
   background: #B99566;
   color: #fff;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: normal;
   padding-left: 20px;
-  line-height: 40px;
+  line-height: 38px;
   text-align: left;
 }
 
@@ -97,20 +99,21 @@ main h2 {
 .information ul li:nth-child(even) {
   background: #F5F3F0;
 }
+.information ul li time {
+  margin-right: 10px;
+}
 .information ul li p {
   display: inline-block
 }
 .information ul li p::before {
   content: "▶︎";
-  padding: 0 10px;
+  padding: 0 10px 0 0;
 }
 
+/* -----------------------------info end */
 
 .gourmet img {
   width: 100%;
-  max-height: 100%;
-  height: 495px;
-  margin: 10px 10px 0 0;
 }
 .box-ttl {
   border-left: 4px solid #000;
@@ -135,9 +138,9 @@ main h2 {
   color: #fff;
   border-radius: 4px;
 }
-.item-gmt {
+article {
   margin-bottom: 20px;
-  width: 100%;
+  width: calc(50% - 5px);
   max-width: 495px;
 }
 .item-gmt p {
@@ -151,6 +154,7 @@ main h2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 10px 0;
 }
 
 /*---------------------------------------- main end */
@@ -199,4 +203,100 @@ footer p {
 }
 small {
   font-size: 12px;
+}
+
+/* ------------------------------- PC end */
+
+@media (max-width: 767px){
+  header {
+    height: 60px;
+  }
+  header h1 img {
+    width: 200px;
+    height: 25px;
+    margin: 17px 15px;
+  }
+  #drawer_toggle {
+    z-index: 200;
+    box-sizing: border-box;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    padding: 20px 15px;
+}
+#drawer_toggle span {
+  display: inline-block;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #666;
+  vertical-align: top;
+}
+header nav {
+  display: none;
+}
+
+  /* header end */
+
+.keyvisual {
+  padding-top: 60px;
+}
+.keyvisual img {
+  vertical-align: bottom;
+}
+
+
+main h2 {
+  font-size: 16px;
+  padding-left: 15px;
+  margin-top: 0;
+}
+
+
+
+.information ul {
+  margin-bottom: 0;
+}
+.information ul li {
+  height: 42px;
+  padding: 5px 10px;
+}
+
+.information ul li time {
+  display: block;
+  margin:  5px 0; 
+  font-size: 12px;
+  line-height: 13px;
+}
+.information ul li p {
+  display: block;
+  line-height: 14px;
+  font-size: 14px;
+}
+.information ul li p::before {
+  padding: 0 5px 0 0;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+/* info end */
+
+.wrap-gmt {
+  flex-flow: column;
+  padding: 10px;
+}
+.wrap-gmt img {
+  max-width: 767px;
+  width: 100%;
+}
+article {
+  width: 100%;
+}
+figure {
+  width: 100%;
+}
+
 }
