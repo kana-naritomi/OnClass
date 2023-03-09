@@ -25,15 +25,7 @@ h2 {
   font-style: italic;
   margin: 0 auto 80px;
   padding: 0 20px;
-}
-h2::after {
-  content: "";
-  display: inline-block;
-  background-color: #282E36;
-  width: 200px;
-  height: 5px;
-  margin-left: 30px;
-  vertical-align: middle;
+  text-align: center;
 }
 .section-inner {
   max-width: 1000px;
@@ -48,7 +40,7 @@ h2::after {
 }
 
 
-.link-btn {
+.submit-btn {
   display: block;
   width: 235px;
   line-height: 60px;
@@ -61,27 +53,17 @@ h2::after {
   font-weight: bold;
   text-decoration: none;
   transition: .3s;
+  border: none;
 }
-.link-btn:hover {
+.submit-btn:hover {
   opacity: .7;
+  cursor: pointer;
 }
 li {
   list-style: none;
 }
 
-.text-right {
-  text-align: right;
-}
-.text-white {
-  color: #fff;
-}
-h2.text-white::after {
-  background-color: #fff;
-}
 
-.sp-br {
-  display: none;
-}
 
 /* -------------------------------- */
 /* header 
@@ -95,7 +77,6 @@ header {
   z-index: 1;
   box-sizing: border-box;
   width: 100%;
-  transition: .3s;
 }
 .header-inner {
   display: flex;
@@ -130,159 +111,98 @@ h1 {
   display: none;
 }
 
-header.fixed {
-  position: fixed;
-  background-color: #282E36;
-  padding: 30px;
-  width: 100%;
-  transition: .3s;
-}
+
 
 /* -------------------------------- */
-/* first view 
+/* page title
 /* -------------------------------- */
 
-.fv {
-  height: 100vh;
-  min-height: 550px;
-  position: relative;
+.page-title-wrapper {
+  height: 453px;
+  background-image: url(../img/contact-page-bgi@2x.jpg);
   background-size: cover;
   background-position: center;
 }
-.fv img {
-  height: 100vh;
-  min-height: 550px;
-  object-fit: cover;
-}
-.main-copy {
-  position: absolute;
-  left: 120px;
-  bottom: 177px;
-  color: #fff;
-  font-weight: bold;
-}
-.en-copy {
-  font-size: 7rem;
-  margin-bottom: 31px;
-}
-.jp-copy {
-  font-size: 4rem;
-  text-align: center;
-}
-
-.slick-arrow {
-  display: none !important;
-}
-
-/* -------------------------------- */
-/* concept
-/* -------------------------------- */
-
-.concept-lead {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 60px;
-  font-weight: bold;
-  line-height: 1.7;
-}
-.concept_flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 70px;
-}
-.concept-text {
-  max-width: 440px;
-  line-height: 1.9;
-  font-weight: bold;
-}
-.concept-img-wrapper {
-  min-width: 440px;
-  margin-left: 20px;
-}
-
-
-/* -------------------------------- */
-/* works
-/* -------------------------------- */
-
-.bg-works {
-  background-image: url(../img/works-bgi@2x.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.works-list {
-  max-width: 1000px;
-  margin: 0 auto 80px;
-  padding: 0 50px;
-  display: flex;
-  justify-content: space-between;
-}
-.works-item {
-  width: 32%;
-  background-color: #fff;
-}
-.works-item a {
-  color: #141414;
-  text-decoration: none;
-}
-.works-list-text {
-  padding: 25px 20px;
-}
-
-
-/* -------------------------------- */
-/* service
-/* -------------------------------- */
-
-.service-list {
-  display: flex;
-}
-.service-item {
-  width: 33.3%;
-}
-.service-item.service1 {
-  background-image: url(../img/service-img01@2x.jpg);
-}
-.service-item.service2 {
-  background-image: url(../img/service-img02@2x.jpg);
-}
-.service-item.service3 {
-  background-image: url(../img/sevice-img03@2x.jpg);
-}
-.service-item a {
-  text-decoration: none;
-  display: block;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  line-height: 320px;
-  font-size: 4rem;
+.page-title {
+  font-size: 6rem;
   font-weight: bold;
   font-style: italic;
-  transition: .3s;
-}
-.service-item a:hover {
-  background-color: rgba(40, 47, 53, .7);
-}
-
-/* -------------------------------- */
-/* contact
-/* -------------------------------- */
-
-.bg-contact {
-  background-image: url(../img/contact-bgi@2x.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.contact-text {
   text-align: center;
+  padding-top: 186px;
   color: #fff;
-  font-size: 2rem;
-  margin-bottom: 40px;
+}
+.page-title-bottom {
+  font-size: 9rem;
+  color: #fff;
+  opacity: .1;
+  margin: 20px 0 0 48px;
 }
 
 
+
+/* -------------------------------- */
+/* form
+/* -------------------------------- */
+.form-wrapper {
+  padding: 100px 0 80px;
+}
+.form-list {
+  max-width: 700px;
+  margin: 0 auto 80px;
+  padding: 0 50px;
+}
+.form-item {
+  margin-bottom: 25px;
+}
+.form-item:last-of-type {
+  margin-bottom: 0;
+}
+.form-label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.input-text,
+textarea {
+  resize: none;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: 1px solid #171717;
+  width: 100%;
+  color: #171717;
+  box-sizing: border-box;
+}
+.input-text {
+  padding: 0 8px;
+  line-height: 30px;
+}
+textarea {
+  height: 170px;
+  padding: 0 8px;
+  line-height: 30px;
+}
+
+.checkbox-list {
+  display: flex;
+}
+.checkbox-item {
+  margin-right: 20px;
+}
+.checkbox label,
+.checkbox {
+  cursor: pointer;
+}
+.checkbox {
+  border: solid 1px #282E36;
+  height: 10px;
+  width: 10px;
+  margin-right: 10px;
+}
+.checkbox:checked {
+  background-color: #333;
+}
 
 /* -------------------------------- */
 /* footer
@@ -404,76 +324,17 @@ footer {
     appearance: none;
   }
 
-
   /* -------------------------------- */
-  /* fv sp
+  /* form sp
   /* -------------------------------- */
-
-  .main-copy {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-
-  }
-  .en-copy {
-    font-size: 9.8vw;
-    white-space: nowrap;
-  }
-  .jp-copy {
-    font-size: 8vw;
-  }
-  
-
-  /* -------------------------------- */
-  /* concept sp
-  /* -------------------------------- */
-
-  .concept-lead {
-    font-size: 2rem;
-    margin-bottom: 32px;
-  }
-  .concept_flex {
+  .checkbox-list {
     display: block;
-    margin-bottom: 40px;
   }
-  .concept-text {
-    max-width: 100%;
-    margin-bottom: 30px;
+  .checkbox-item {
+    margin-right: 0;
   }
-  .concept-img-wrapper {
-    margin: 0;
-  }
-
-
-  /* -------------------------------- */
-  /* works sp
-  /* -------------------------------- */
-
-  .works-list {
-    display: block;
-    padding: 0 4vw;
-    margin-bottom: 80px;
-  }
-  .works-item {
-    width: 320px;
-    max-width: 100%;
-    margin: 0 auto 30px;
-  }
-
-  /* -------------------------------- */
-  /* service sp
-  /* -------------------------------- */
-
-  .service-list {
-    display: block;
-    margin-bottom: 40px;
-  }
-  .service-item {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  .service-item a {
-    line-height: 250px;
+  .form-list {
+    padding: 0 20px;
   }
 
 }
