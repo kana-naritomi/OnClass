@@ -2,8 +2,10 @@
 // base
 // -----------------------------
 $txt-color: #333;
-$btn-color: #aa009f;
+$btn-color: linear-gradient(90deg,#FA41CC, #6020B0);
 $sub-ttl-color: #3BA6C9;
+$bg-color: #EEFBFB;
+$gradient: linear-gradient(90deg, #05A5FA, #67FFD6);
 
 .contact-btn {
   width: 155px;
@@ -19,6 +21,9 @@ $sub-ttl-color: #3BA6C9;
 
 a {
   text-decoration: none;
+}
+body {
+  font-weight: bold;
 }
 
 // -----------------------------
@@ -55,12 +60,14 @@ a {
     font-size: 24px;
     font-weight: bold;
     margin-left: 16px;
+    color: $txt-color;
   }
   &-nav {
     ul {
       display: flex;
       justify-content: space-between;
       li {
+        font-weight: bold;
         text-align: center;
         margin-right: 45px;
         a {
@@ -167,5 +174,168 @@ a {
       line-height: 1.5;
       font-weight: bold;
     }
+  }
+}
+
+
+// -----------------------------
+// price
+// -----------------------------
+
+.price {
+  background-color: $bg-color;
+  padding: 20px 20px 50px;
+
+  &-inner {
+    max-width: 930px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &-ttl {
+    margin-top: 40px;
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 70px;
+    span {
+      font-size: 16px;
+      color: $sub-ttl-color;
+      display: block;
+      margin-top: 20px;
+    }
+  }
+
+  table {
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    border-collapse: collapse;
+    th {
+      widows: 30%;
+      padding: 30px;
+      min-width: 300px;
+      border: 1px solid #E5E5E5;
+    }
+    td {
+      width: 70%;
+      text-align: left;
+      padding: 30px;
+      border: 1px solid #E5E5E5;
+      font-weight: bold;
+    }
+  }
+
+  p {
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+
+// -----------------------------
+// contact
+// -----------------------------
+
+.contact {
+  background: $gradient;
+  padding: 70px 20px;
+  color: #fff;
+  text-align: center;
+  
+  &-ttl {
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #fff;
+    span {
+      font-size: 16px;
+      display: block;
+      margin-top: 20px;
+    }
+  } 
+  
+  p {
+    margin-bottom: 44px;
+    line-height: 1.8;
+  }
+
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+// -----------------------------
+// FAQ
+// -----------------------------
+
+.faq {
+
+  color: $txt-color;
+  padding-bottom: 85px;
+
+  &-ttl {
+    margin-top: 50px;
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+    
+    span {
+      font-size: 16px;
+      color: $sub-ttl-color;
+      display: block;
+      margin-top: 20px;
+    }
+  }
+  
+  &-inner {
+    max-width: 910px;
+    margin-left: auto;
+    margin-right: auto;
+  
+    .accordion {
+      width: 100%;
+      margin: 0 auto;
+      font-weight: bold;
+      line-height: 26px;
+
+      .question {
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        border: 1px solid #E5E5E5;
+      }
+
+      .answer {
+        padding: 20px 35px;
+        text-align: left;
+        font-size: 14px;
+        border: 1px solid #E5E5E5;
+        background-color: #F2F2F2;
+      }
+    }
+  }
+
+}
+
+
+
+
+// -----------------------------
+// footer
+// -----------------------------
+
+
+footer {
+  padding: 60px 20px 30px;
+  text-align: center;
+  background: #F8F8F8;
+  small {
+    font-size: 14px;
   }
 }

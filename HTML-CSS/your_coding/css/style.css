@@ -1,7 +1,7 @@
 .contact-btn {
   width: 155px;
   height: 37px;
-  background: #aa009f;
+  background: linear-gradient(90deg, #FA41CC, #6020B0);
   color: #fff;
   border-radius: 10px;
   display: block;
@@ -12,6 +12,10 @@
 
 a {
   text-decoration: none;
+}
+
+body {
+  font-weight: bold;
 }
 
 .header {
@@ -45,12 +49,14 @@ a {
   font-size: 24px;
   font-weight: bold;
   margin-left: 16px;
+  color: #333;
 }
 .header-nav ul {
   display: flex;
   justify-content: space-between;
 }
 .header-nav ul li {
+  font-weight: bold;
   text-align: center;
   margin-right: 45px;
 }
@@ -133,4 +139,128 @@ a {
 .feature-box p {
   line-height: 1.5;
   font-weight: bold;
+}
+
+.price {
+  background-color: #EEFBFB;
+  padding: 20px 20px 50px;
+}
+.price-inner {
+  max-width: 930px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.price-ttl {
+  margin-top: 40px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 70px;
+}
+.price-ttl span {
+  font-size: 16px;
+  color: #3BA6C9;
+  display: block;
+  margin-top: 20px;
+}
+.price table {
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  border-collapse: collapse;
+}
+.price table th {
+  widows: 30%;
+  padding: 30px;
+  min-width: 300px;
+  border: 1px solid #E5E5E5;
+}
+.price table td {
+  width: 70%;
+  text-align: left;
+  padding: 30px;
+  border: 1px solid #E5E5E5;
+  font-weight: bold;
+}
+.price p {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact {
+  background: linear-gradient(90deg, #05A5FA, #67FFD6);
+  padding: 70px 20px;
+  color: #fff;
+  text-align: center;
+}
+.contact-ttl {
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #fff;
+}
+.contact-ttl span {
+  font-size: 16px;
+  display: block;
+  margin-top: 20px;
+}
+.contact p {
+  margin-bottom: 44px;
+  line-height: 1.8;
+}
+.contact .center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq {
+  color: #333;
+  padding-bottom: 85px;
+}
+.faq-ttl {
+  margin-top: 50px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.faq-ttl span {
+  font-size: 16px;
+  color: #3BA6C9;
+  display: block;
+  margin-top: 20px;
+}
+.faq-inner {
+  max-width: 910px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.faq-inner .accordion {
+  width: 100%;
+  margin: 0 auto;
+  font-weight: bold;
+  line-height: 26px;
+}
+.faq-inner .accordion .question {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #E5E5E5;
+}
+.faq-inner .accordion .answer {
+  padding: 20px 35px;
+  text-align: left;
+  font-size: 14px;
+  border: 1px solid #E5E5E5;
+  background-color: #F2F2F2;
+}
+
+footer {
+  padding: 60px 20px 30px;
+  text-align: center;
+  background: #F8F8F8;
+}
+footer small {
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
