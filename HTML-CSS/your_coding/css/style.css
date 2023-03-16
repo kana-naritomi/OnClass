@@ -3,6 +3,7 @@
   height: 37px;
   background: linear-gradient(90deg, #FA41CC, #6020B0);
   color: #fff;
+  font-size: 14px;
   border-radius: 10px;
   display: block;
   text-align: center;
@@ -16,6 +17,7 @@ a {
 
 body {
   font-weight: bold;
+  font-family: "Noto Sans JP";
 }
 
 .header {
@@ -241,19 +243,72 @@ body {
   margin: 0 auto;
   font-weight: bold;
   line-height: 26px;
+  cursor: pointer;
 }
-.faq-inner .accordion .question {
+.faq-inner .accordion-ttl {
   padding: 20px;
   text-align: center;
   font-size: 14px;
   border: 1px solid #E5E5E5;
 }
-.faq-inner .accordion .answer {
+.faq-inner .accordion-cnt {
   padding: 20px 35px;
   text-align: left;
   font-size: 14px;
   border: 1px solid #E5E5E5;
   background-color: #F2F2F2;
+  display: none;
+}
+.faq-inner .accordion .is-open {
+  display: block;
+}
+
+.blog {
+  background-color: #EEFBFB;
+  padding: 5px 70px 90px;
+  color: #333;
+}
+.blog-ttl {
+  margin-top: 50px;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+.blog-ttl span {
+  font-size: 16px;
+  color: #3BA6C9;
+  display: block;
+  margin-top: 20px;
+}
+.blog-inner {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.blog-item {
+  width: 32%;
+  background: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  opacity: 1;
+}
+.blog-item img {
+  width: 100%;
+}
+.blog-text {
+  padding: 14px 32px 10px 18px;
+  line-height: 26px;
+}
+.blog-text p {
+  font-size: 18px;
+  display: inline-block;
+  height: 110px;
+}
+.blog-text time {
+  display: block;
+  font-size: 16px;
+  text-align: right;
+  bottom: 10px;
 }
 
 footer {
@@ -263,4 +318,5 @@ footer {
 }
 footer small {
   font-size: 14px;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
