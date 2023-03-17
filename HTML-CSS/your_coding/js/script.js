@@ -104,3 +104,26 @@ accordionsArr.forEach((accordion) => {
     });
   });
 });
+
+
+// -------------------------------
+// swiper
+// -------------------------------
+
+const swiper = new Swiper('.swiper',{
+  loop: true,
+  autoplay: {
+    delay: 0,
+  },
+  speed: 5000,
+  slidesPerView: 3.5,
+});
+
+const setFillHeight = () => {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+window.addEventListener('resize', setFillHeight);
+
+setFillHeight();
