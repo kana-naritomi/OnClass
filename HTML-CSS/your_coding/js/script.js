@@ -1,3 +1,7 @@
+AOS.init();
+
+
+
 // -------------------------------
 // accordion
 // -------------------------------
@@ -113,10 +117,11 @@ accordionsArr.forEach((accordion) => {
 const swiper = new Swiper('.swiper',{
   loop: true,
   autoplay: {
-    delay: 0,
+    delay: 5000,
   },
-  speed: 5000,
-  slidesPerView: 3.5,
+  slidesPerView: 3.75,
+  centeredSlides: true,
+  spaceBetween: 55
 });
 
 const setFillHeight = () => {

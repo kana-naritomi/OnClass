@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -41,7 +42,8 @@
     <main>
       <section class="main">
         <div class="main-inner">
-          <div class="main-copy">
+          <div class="main-bg" data-aos="zoom-in"></div>
+          <div class="main-copy" data-aos="fade-up">
             <h2>
               コーディングの手間を<br>
               最小に、デザインに注力<br>
@@ -55,7 +57,7 @@
               </p>
               <a href="" class="contact-btn">お問い合わせ</a>
           </div><!-- /main-copy -->
-          <div class="main-img">
+          <div class="main-img" data-aos="zoom-in">
             <img src="img/manager.png" alt="メインイメージ">
           </div><!-- /main-img -->
         </div><!-- /main-inner -->
@@ -65,13 +67,13 @@
       <!-- feature -->
       <section class="feature">
         <div class="feature-inner">
-          <h2 class="feature-ttl">
+          <h2 class="feature-ttl" data-aos="fade-up">
             ユアコーディング3つの特徴<span>FEATURES</span>
           </h2>
-          <h2 class="feature-heading">高速コーディング</h2>
+          <h2 class="feature-heading" data-aos="fade-up">高速コーディング</h2>
           <div class="feature-box">
-            <figure><img src="img/cto.png" alt=""></figure>
-            <div>
+            <figure><img src="img/cto.png" alt="" data-aos="zoom-in-up"></figure>
+            <div data-aos="zoom-in-up">
               <h3>
                 コーディングに特化したフリーランスのため、<br>
                 スピード感を持った開発が可能。
@@ -84,9 +86,9 @@
               </p>
             </div>
           </div><!-- feature-box -->
-          <h2 class="feature-heading">高品質</h2>
+          <h2 class="feature-heading" data-aos="fade-up">高品質</h2>
           <div class="feature-box">
-            <div>
+            <div data-aos="zoom-in-up">
               <h3>
                 正しいマークアップで、<br>
                 内部SEOに強いコーディングを<br>
@@ -98,12 +100,12 @@
                 きちんとコーディングを行うため、 納品後も安心です。
               </p>
             </div>
-            <figure><img src="img/building_website.png" alt=""></figure>
+            <figure><img src="img/building_website.png" alt="" data-aos="zoom-in-up"></figure>
           </div><!-- feature-box -->
-          <h2 class="feature-heading">迅速なレスポンス</h2>
+          <h2 class="feature-heading" data-aos="fade-up">迅速なレスポンス</h2>
           <div class="feature-box">
-            <figure><img src="img/new_message.png" alt=""></figure>
-            <div>
+            <figure><img src="img/new_message.png" alt="" data-aos="zoom-in-up"></figure>
+            <div data-aos="zoom-in-up">
               <h3>
                 原則いただいたメッセージは、<br>
                 業務時間内であれば6時間以内に<br>
@@ -123,11 +125,11 @@
 
       <!-- price -->
       <section class="price">
-        <h2 class="price-ttl">
+        <h2 class="price-ttl" data-aos="fade-up">
             価格<span>PRICE</span>
         </h2>
         <div class="price-inner">
-          <table>
+          <table data-aos="fade-up">
             <tr>
               <th>HTMLコーディングトップページ</th>
               <td>30,000円~</td>
@@ -145,17 +147,17 @@
               <td>15,000円~</td>
             </tr>
           </table>
-          <p>＊詳細な価格はページや仕様によって異なります</p>
+          <p data-aos="zoom-in">＊詳細な価格はページや仕様によって異なります</p>
         </div>
       </section>
       <!-- //price -->
 
       <section class="faq">
-        <h2 class="faq-ttl">
+        <h2 class="faq-ttl" data-aos="fade-up">
           よくある質問
           <span>FAQ</span>
         </h2>
-        <div class="faq-inner">
+        <div class="faq-inner" data-aos="fade-im">
           <div class="accordion js-accordion">
 
             <div class="accordion-item js-accordion-trigger is-active">
@@ -193,23 +195,23 @@
 
       <!-- BLOG -->
       <section class="blog">
-        <h2 class="blog-ttl">ブログ<span>BLOG</span></h2>
+        <h2 class="blog-ttl" data-aos="fade-up">ブログ<span>BLOG</span></h2>
         <div class="blog-inner">
-          <div class="blog-item">
+          <div class="blog-item" data-aos="flip-left">
             <img src="img/blog-1.png" alt="">
             <div class="blog-text">
               <p>サイトをリニューアルオープンしました。</p>
               <time datetime="2020-01-23">2020.01.23</time>
             </div>
           </div>
-          <div class="blog-item">
+          <div class="blog-item" data-aos="flip-left">
             <img src="img/blog-2.png" alt="">
             <div class="blog-text">
               <p>WebサイトでSEO内部施策に適したコーディングでどれぐらいサイトが早くなるのか検証してみました</p>
               <time datetime="2020-01-24">2020.01.24</time>
             </div>
           </div>
-          <div class="blog-item">
+          <div class="blog-item" data-aos="flip-left">
             <img src="img/blog-3.png" alt="">
             <div class="blog-text">
               <p>ユアコーディングではデザイナーの方を広く募集しています。</p>
@@ -222,7 +224,7 @@
 
       <!-- works -->
       <section class="works">
-        <h2 class="works-ttl">
+        <h2 class="works-ttl" data-aos="zoom-in">
           制作実績<span>WORKS</span>
         </h2>
         <div class="works-inner swiper">
@@ -300,15 +302,35 @@
 
       <!-- contact -->
       <section class="contact">
-        <h2 class="contact-ttl">
+        <h2 class="contact-ttl" data-aos="fade-up">
           お問い合わせ<span>Contact</span>
         </h2>
         <div class="contact-inner">
-          <p>
+          <p class="contact-text" data-aos="fade-up">
             コーディングの人出が足りないとき、<br>
             あなたの力になります
           </p>
-          <a href="" class="contact-btn center">お問い合わせ</a>
+        </div>
+        <div class="form" data-aos="zoom-in">
+          <form action="" id="form">
+            <div class="box form-flex">
+              <p><label for="name">お名前<span>必須</span></label></p>
+              <input type="text" id="name" placeholder="" required>
+            </div>
+            <div class="box form-flex">
+              <p><label for="mail">メールアドレス<span>必須</span></label></p>
+              <input type="text" id="mail" placeholder="" required>
+            </div>
+            <div class="box form-flex">
+              <p><label for="text">お問い合わせ内容<span>必須</span></label></p>
+              <textarea name="" id="text" cols="30" rows="10" placeholder=""></textarea>
+            </div>
+            <div class="pc-box">
+              <input type="checkbox" id="privacyCheck" required>
+              <label for="privacyCheck">プライバシーポリシーに同意します</label>
+            </div>
+            <input type="submit" id="js-submit" class="contact-submit" value="送信する" disabled>
+          </form>
         </div>
       </section>
       <!-- //contact -->
@@ -317,11 +339,17 @@
 
 
     <!-- footer -->
-    <footer>
+    <footer class="footer">
+      <h2 class="footer-ttl"><a href="#">ユアコーディング</a></h2>
+      <div class="p-wrap">
+        <p><a href="#" class="privacy">プライバシーポリシー</a></p>
+        <p><a href="#">個人商取引法に基づく表記</a></p><br>
+      </div>
       <small>&copy;ユアコーディング, All Right Reserved.</small>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
