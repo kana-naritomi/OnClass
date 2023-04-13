@@ -1,0 +1,300 @@
+/* テスト実装 
+.test {
+  display: inline-block;
+  padding: 20px 40px;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* --------------------------------- */
+
+/* ハンバーガー */
+.openbtn8{
+  position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+  background:#68b6ff;
+  cursor: pointer;
+    width: 50px;
+    height:50px;
+  border-radius: 5px;
+  margin-left: auto;
+  z-index: 9999;
+}
+
+/*ボタン内側*/
+.openbtn8 .openbtn-area{
+    transition: all .6s;/*アニメーションの設定*/
+  width:50px;
+  height:50px;
+}
+
+.openbtn8 span{
+    display: inline-block;
+    transition: all .7s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+  background: #fff;
+    width: 45%;
+  }
+
+.openbtn8 span:nth-of-type(1) {
+  top:15px; 
+}
+
+.openbtn8 span:nth-of-type(2) {
+  top:23px;
+}
+
+.openbtn8 span:nth-of-type(3) {
+  top:31px;
+}
+
+/*activeクラスが付与されると .openbtn-areaが360度回転し、その中の線が回転して×に*/
+.openbtn8.active .openbtn-area{
+  transform: rotate(360deg);
+}
+
+.openbtn8.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+}
+
+.openbtn8.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn8.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+}
+
+/* nav */
+
+#g-nav.panelactive{
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position:fixed;
+  z-index: 999;
+top: 0;
+width:100%;
+  height: 100vh;
+}
+
+#g-nav.panelactive {
+  display: block; /*クラスが付与されたら出現*/
+}
+
+/*丸の拡大*/
+.circle-bg{
+  position: fixed;
+z-index:3;
+  /*丸の形*/
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #68b6ff;
+  /*丸のスタート位置と形状*/
+transform: scale(0);/*scaleをはじめは0に*/
+  top:calc(50% - 50px);/*50%から円の半径を引いた値*/
+  left:calc(50% - 50px);/*50%から円の半径を引いた値*/
+  transition: all .6s;/*0.6秒かけてアニメーション*/
+}
+
+.circle-bg.circleactive{
+transform: scale(50);/*クラスが付与されたらscaleを拡大*/
+}
+
+
+#g-nav ul {
+  opacity: 0;/*はじめは透過0*/
+    /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*背景が出現後にナビゲーションを表示*/
+#g-nav.panelactive ul {
+    opacity:1;
+}
+
+/* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
+#g-nav.panelactive ul li{
+animation-name:gnaviAnime;
+animation-duration:1s;
+animation-delay:.2s;/*0.2 秒遅らせて出現*/
+animation-fill-mode:forwards;
+opacity:0;
+}
+@keyframes gnaviAnime{
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+/*リストのレイアウト設定*/
+#g-nav li{
+  text-align: center; 
+  list-style: none;
+}
+
+#g-nav li a{
+  color: #fff;
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+
+/* スライドショー ---------------------------- */
+
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+  width:94%;
+  margin:0 auto;
+}
+
+.slider img {
+  width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height:auto;
+}
+
+.slider .slick-slide {
+transform: scale(0.8);/*左右の画像のサイズを80%に*/
+transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+  position: absolute;/*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;/*マウスカーソルを指マークに*/
+  outline: none;/*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666;/*矢印の色*/
+  border-right: 2px solid #666;/*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align:center;
+  margin:20px 0 0 0;
+}
+
+.slick-dots li {
+  display:inline-block;
+  margin:0 5px;
+}
+
+.slick-dots li button {
+  color: transparent;
+  outline: none;
+  width: 8px;/*ドットボタンのサイズ*/
+  height: 8px;/*ドットボタンのサイズ*/
+  display:block;
+  border: none;
+  /* border-radius:50%; */
+  background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+  background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+/* モーダルウィンドウ ------------------------------- */
+
+/*infoエリアをはじめは非表示*/
+.modal {
+  margin: 50px auto;
+}
+.modal-open {
+  color: #666;
+}
+#info{
+  display: none;
+}
+
+/*モーダルの横幅を変更したい場合*/
+.modaal-container{
+    max-width: 600px;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after, 
+.modaal-close:before{
+  background:#ccc;  
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before{
+  background:#666;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+  padding:20px;
+}
+
+h2,p {
+  text-align:center;
+  padding:20px;
+}
+a{
+  text-decoration: none;
+}
+
+.lead{
+  margin:20px 0 0 0;
+}
+
+.btn-block{
+  width:200px;  
+  padding: 30px;
+}
+
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+a:hover,
+a:active{
+  text-decoration: none;
+}
